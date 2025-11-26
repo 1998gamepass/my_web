@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linktree 類單頁</title>
+    <style>
+        /* 基本樣式 */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        /* 頭像 */
+        .avatar {
+            width: 25vw;        /* 自動縮放 */
+            max-width: 120px;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        /* 使用者名稱 */
+        .username {
+            font-size: 4vw;
+            max-font-size: 36px;
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+        }
+
+        /* 介紹文字 */
+        .bio, .sub-bio {
+            font-size: 3.5vw;
+            max-font-size: 20px;
+            color: #555;
+            margin: 3px 0;
+        }
+
+        .sub-bio {
+            color: #777;
+        }
+
+        /* 按鈕樣式 */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .link-button {
+            width: 100%;
+            padding: 3vw 0; /* 高度隨螢幕縮放 */
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 4vw;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .link-button:hover {
+            background-color: #1E90FF;
+            transform: scale(1.03);
+        }
+
+        @media (max-width: 400px) {
+            .username {
+                font-size: 6vw;
+            }
+            .bio, .sub-bio {
+                font-size: 4.5vw;
+            }
+            .link-button {
+                font-size: 5vw;
+                padding: 4vw 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 頭像 -->
+        <img src="avatar.jpg" alt="頭像" class="avatar">
+
+        <!-- 使用者名稱 -->
+        <div class="username">Evan journal</div>
+
+        <!-- 介紹文字 -->
+        <div class="bio">Hi, I’m Evan! Content creator on a mission to bring a little more joy into your day.</div>
+        <div class="sub-bio">here's find me everywhere</div>
+
+        <!-- 導流按鈕 -->
+        <div class="links">
+            <a href="https://example1.com" class="link-button">網站一</a>
+            <a href="https://example2.com" class="link-button">網站二</a>
+            <a href="https://example3.com" class="link-button">網站三</a>
+            <a href="https://example4.com" class="link-button">網站四</a>
+            <a href="https://example5.com" class="link-button">網站五</a>
+            <a href="https://example6.com" class="link-button">網站六</a>
+        </div>
+    </div>
+</body>
+</html>
